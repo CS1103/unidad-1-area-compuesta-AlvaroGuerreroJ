@@ -14,6 +14,6 @@ string Figure::info_str()
     ostringstream os;
     os << "Area: " << this->calc_area() << endl;
     Position c = this->calc_centroid();
-    os << "Centroid:\tx=" << c.x << "\ty=" << c.y << endl;
+    os << "Centroid:\t" << c << endl;
     return os.str();
 }

@@ -59,7 +59,7 @@ public:
         os << "Vertexes:" << std::endl;
         for (const Position& v : this->vertexes)
         {
-            os << v << " ";
+            os << v << "\t";
         }
         os << std::endl;
         return os.str();

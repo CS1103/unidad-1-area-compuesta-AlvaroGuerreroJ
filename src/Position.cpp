@@ -25,6 +25,6 @@ Position& Position::operator=(const Position& other)
 
 std::ostream& operator<<(std::ostream& out, const Position& p)
 {
-    out << "x: " << p.x << "\t" << "y: " << p.y;
+    out << "x: " << p.x << " " << "y: " << p.y;
     return out;
 }
