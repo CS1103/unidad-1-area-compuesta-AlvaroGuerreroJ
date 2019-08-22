@@ -9,7 +9,6 @@
 #include "Figure.hpp"
 #include "Position.hpp"
 
-template<unsigned int n_sides>
 class Polygon : public Figure
 {
 private:
@@ -34,14 +33,14 @@ public:
             x += vertex.x;
             y += vertex.y;
         }
-        return Position(x / n_sides, y / n_sides);
+        return Position(x / this->vertexes.size(), y / this->vertexes.size());
     }
 
     double calc_area() override
     {
         double p0 = 0;
         double p1 = 0;
-        for (unsigned int i = 0; i < n_sides - 1; i++)
+        for (unsigned int i = 0; i < this->vertexes.size() - 1; i++)
         {
             p0 += vertexes[i].x * vertexes[i + 1].y;
             p1 += vertexes[i].y * vertexes[i + 1].x;

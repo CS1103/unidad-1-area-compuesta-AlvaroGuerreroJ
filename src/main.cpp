@@ -17,22 +17,22 @@ int main()
 
     // The arguments to the polygons must be given in clockwise or
     // counter-clockwise order.
-    Polygon<3> triangle(Position(0, 0), Position(1, 0), Position(0, 1));
+    Polygon triangle(Position(0, 0), Position(1, 0), Position(0, 1));
     cout << "Triangle: " << endl;
     cout << triangle.info_str();
     cout << endl;
 
-    Polygon<4> square(Position(0, 0), Position(1, 0), Position(1, 2), Position(0, 1));
+    Polygon square(Position(0, 0), Position(1, 0), Position(1, 2), Position(0, 1));
     cout << "Square: " << endl;
     cout << square.info_str();
     cout << endl;
 
-    Polygon<5> pentagon(Position(0, 0), Position(1, 0), Position(1, 1), Position(1, 2), Position(0, 1));
+    Polygon pentagon(Position(0, 0), Position(1, 0), Position(1, 1), Position(1, 2), Position(0, 1));
     cout << "Pentagon: " << endl;
     cout << pentagon.info_str();
     cout << endl;
 
-    CompositeFigure comp{new Circle(Position(0, 0), 10), new Polygon<3>(Position(10, 0), Position(10, 10), Position(0, 10))};
+    CompositeFigure comp{new Circle(Position(0, 0), 10), new Polygon(Position(10, 0), Position(10, 10), Position(0, 10))};
     cout << "Composition: " << endl;
     cout << comp.info_str();
     cout << endl;
