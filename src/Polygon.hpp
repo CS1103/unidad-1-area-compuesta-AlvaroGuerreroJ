@@ -15,13 +15,9 @@ private:
     std::vector<Position> vertexes;
 
 public:
-    Polygon() = default;
-
-    template<class T, class... T2>
-    Polygon(T first, T2... rest)
-        : Polygon(rest...)
+    template<class ...T>
+    Polygon(T ...points) : vertexes({points...})
     {
-        this->vertexes.push_back(first);
     }
 
     Position calc_centroid() override
