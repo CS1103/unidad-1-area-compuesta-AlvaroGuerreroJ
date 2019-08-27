@@ -35,4 +35,7 @@
 
 # Build
 /build
->>>>>>> Initial commit.
+
+# VS Code
+/.vscode
+
